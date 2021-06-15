@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/sindresorhus/github-markdown-css@4/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PrismJS/prism@1/themes/prism.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .markdown-styles,
+        .markdown-body {
+            max-width: 800px;
+            margin: 30px;
+        }
+    </style>
+    <title>installatieDocumentatie</title>
+</head>
+
+<body>
+    <div class="markdown-body">
+        <h1 id="installatie-documentatie">installatie documentatie</h1>
+        <h2 id="inhoudsopgave">inhoudsopgave</h2>
+        <ul>
+            <li><a href="#installatie-documentatie">installatie documentatie</a>
+                <ul>
+                    <li><a href="#inhoudsopgave">inhoudsopgave</a></li>
+                    <li><a href="#instellingen-aanpassen">instellingen aanpassen</a></li>
+                    <li><a href="#macro-installeren">macro installeren</a>
+                        <ul>
+                            <li><a href="#1-login-op-de-codec">1. Login op de codec</a></li>
+                            <li><a href="#2-macro-installeren">2. Macro installeren</a></li>
+                            <li><a href="#3-configureren-van-schermen">3. Configureren van schermen</a></li>
+                            <li><a href="#4-toevoegen-van-reset-knop-optioneel">4. Toevoegen van reset knop
+                                    (optioneel)</a>
+                                <ul>
+                                    <li><a href="#overige-instellingen">overige instellingen</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2 id="instellingen-aanpassen">instellingen aanpassen</h2>
+        <p>om de macro te installeren moet je eerst zorgen dat macro’s ingesteld zijn. Dat zijn de volgende:</p>
+        <ul>
+            <li>macro`s<ul>
+                    <li>AutoStart: ON</li>
+                    <li>Mode: On</li>
+                    <li>UnresponsiveTimeout: 5</li>
+                    <li>XAPI Transport WebSocket</li>
+                </ul>
+            </li>
+        </ul>
+        <h2 id="macro-installeren">macro installeren</h2>
+        <p>zodra die goed ingesteld zijn kun je de applicatie installeren. Dat kun je gemakkelijk doen door de volgende
+            stappen te volgen:</p>
+        <h3 id="1-login-op-de-codec">1. Login op de codec</h3>
+        <p>om in te loggen op de codec moet je eerst verbinding maken met de web interface van de codec. Dat kun je doen
+            door in de browser naar het IP address van de codec te gaan. <code>bijv. 192.168.17.94</code>.</p>
+        <p>zodra je op de inlog pagina bent moet je inloggen. Het standaard wachtwoord voor het admin account bestaat
+            niet.
+            Dus als die niet aangepast is kun je inloggen met de gebruikersnaam admin en geen wachtwoord.</p>
+        <h3 id="2-macro-installeren">2. Macro installeren</h3>
+        <p><img src="http://127.0.0.1:5500/productmap/B1-K2%20Realiseert%20en%20test%20(onderdelen%20van)%20een%20product/B1-K2-W1%20Realiseert%20(onderdelen%20van)%20een%20product/code/./images/loginscreen.PNG"
+                alt="loginscherm met gebruikersnaam ingevuld"></p>
+        <p>nu je ingelogd bent kun je de macro installeren om dat te doen moet je kun je naar het tabblad
+            <code>Macro Editor</code> gaan onder het kopje <code>Integration</code>.
+        </p>
+        <p><img src="http://127.0.0.1:5500/productmap/B1-K2%20Realiseert%20en%20test%20(onderdelen%20van)%20een%20product/B1-K2-W1%20Realiseert%20(onderdelen%20van)%20een%20product/code/./images/navbar.PNG"
+                alt="voorbeeld van navigatiebalk met het kopje integratie/Macro editor geselecteerd"></p>
+        <p>zodra je in de Macro editor bent kun je de macro uploaden dat kun je doen door op de knop
+            <code>Import from file...</code> te drukken, zodra je dat gedaan hebt kan je het bestand waar de macro in
+            staat
+            uploaden. Dat is een <code>.js</code> bestand. Als je de sourcecode hebt gedownload van <a
+                href="https://github.com/School-Michel-Gerding/ExamenOpdracht">https://github.com/School-Michel-Gerding/ExamenOpdracht</a>
+            heeft hij de naam <code>shareScreen.js</code>. Zodra je dat gedaan hebt moet je hem opslaan dat kan door te
+            drukken op de toetsen ctrl+s, je kun t het ook doen met de opslaan knop bij de macro in de lijst van
+            macro`s.
+        </p>
+        <p>![lijst van macro`s](./images/macrolist.png)</p>
+        <p>zodra je dat hebt gedaan kun je de macro gebruiken.</p>
+        <h3 id="3-configureren-van-schermen">3. Configureren van schermen</h3>
+        <p>zodra je de macro geinstaleerd hebt moet je er voor zorgen dat minimaal 1 scherm ingesteld is als 1ste
+            scherm. Om
+            dat te doen moet je weer gaan naar het hoofdscherm van de webinterface. Vanaf de macro editor kun je terug
+            naar
+            het hoofdscherm door op het cisco logo linksboven in het scherm te klikken.</p>
+        <p>zodra je op het hoofdscherm bent kun je de schermen aanpassen door te klikken op de link Configuration in het
+            kopje setup.</p>
+        <p><img src="http://127.0.0.1:5500/productmap/B1-K2%20Realiseert%20en%20test%20(onderdelen%20van)%20een%20product/B1-K2-W1%20Realiseert%20(onderdelen%20van)%20een%20product/code/./images/navbar2.png"
+                alt="navbar"></p>
+        <p>zodra je in de configuratie scherm bent moet je naar het kopje video gaan. Dat kun je doen door het linkje
+            viedo
+            te klikken in de navigatie lijst aan de linker zijkant. Zodra je in de configuratie van de video bent moet
+            je
+            verifieren dat teniminste 1 output de instelling <code>MonitorRole</code> op <code>First</code> staat. Zodra
+            dat
+            klaar is kan je de module gaan gebruiken.</p>
+        <h3 id="4-toevoegen-van-reset-knop-optioneel">4. Toevoegen van reset knop (optioneel)</h3>
+        <p>ook heeft de module de mogelijkheid om een reset knop te gebruiken. Daarvoor moet je een knop toevoegen aan
+            het
+            touch 10 paneel. Om dat te doen kan moet je eerst naar de <code>UI Extension Editor</code> gaan om daar te
+            komen
+            moet je vanaf het hoofdscherm op de link <code>UI Extension Editor</code> klikken deze staat onder het kopje
+            `integration</p>
+        <p><img src="http://127.0.0.1:5500/productmap/B1-K2%20Realiseert%20en%20test%20(onderdelen%20van)%20een%20product/B1-K2-W1%20Realiseert%20(onderdelen%20van)%20een%20product/code/./images/navbar3.png"
+                alt="navbar instructie ui extension editor"></p>
+        <p>zodra je in de ui extension editor bent kun je een nieuwe extensie maken. Dat kun je doen door op de knop
+            nieuw
+            te drukken in de linker sidebar.</p>
+        <p><img src="http://127.0.0.1:5500/productmap/B1-K2%20Realiseert%20en%20test%20(onderdelen%20van)%20een%20product/B1-K2-W1%20Realiseert%20(onderdelen%20van)%20een%20product/code/./images/uiexteditor.png"
+                alt="ui extension editor sidebar"></p>
+        <p>zodra je op die knop drukt dan krijg je een keuze om een bepaald type toe te voegen. Daarvan moet je de
+            action
+            button kiezen. Zodra je dat hebt gedaan krijg je aan de rechter kant ook nog een sidebar erbij.
+            Daarin moet je de volgende dingen aanpassen:</p>
+        <ul>
+            <li>Id: het id moet je aanpassen naar het volgende : <code>reset_all_display</code>'</li>
+            <li>Name: Dit is het label van de knop. Deze moet je aanpassen naar de naam die je op het touchpaneel wilt
+                laten
+                zien, bijv: <code>Reset Schermen</code></li>
+            <li>button visibility: met deze optie kun je selecteren waar de knop zichtbaar is. Deze die moet staan op
+                <code>Only out of call</code> of <code>Always</code> als je hem ook in gesprekken wilt laten zien moet
+                je
+                hem zetten op <code>Always</code> anders op <code>Only out of call</code>
+            </li>
+            <li>icon: dit is het icoon van de knop die je te zien krijgt op de cisco codec deze kun je aanpassen naar
+                wat je
+                wilt.</li>
+            <li>Extension button color: de kleur van de knop: deze optie bepaald de kleur vna de achtergrond van het
+                icoon
+                op het touch paneel. Deze kun je ook zelf bepalen.</li>
+        </ul>
+        <p>zodra je dit ingesteld hebt kun je op de upload knop drukken of de sneltoest <code>ctrl+e</code> zodra je dat
+            hebt gedaan kun je zien dat hij op het touchpaneel komt te staan.</p>
+        <p>zodra je dit hebt gedaan heb je alle dingen van de macro ingesteld en ben je klaar om hem te gaan gebruiken.
+        </p>
+        <h4 id="overige-instellingen">overige instellingen</h4>
+        <p>deze macro heeft ook nog een paar instellingen. Namelijk de volgende:</p>
+        <ul>
+            <li>fallbackLanguage: de standaard taal die gebruikt wordt als de taal die in het systeem is ingesteld niet
+                beschikbaar in is in de macro. Deze optie kan de volgende waardes hebben <code>dutch</code>,
+                <code>english</code> en de standaard waarde is <code>english</code>.
+                Om meerdere talen toe te voegen kan je dat doen in de text variable in de macro`s broncode
+            </li>
+            <li>useMonitorName: dit is een optie om de naam van de monitoren aan te passen. Als de waarde van deze macro
+                <code>true</code> is dan neemt hij standaard de waarde die gekregen is van het verbonden beeldscherm.
+                Anders
+                maakt hij gebruik van de ingestelde naam in de variabele connectorNames. Deze optie kan de
+                waardes<code>true</code>en <code>false</code> hebben.
+            </li>
+            <li>text: dit is een datastructuur voor de text die in de module aan de gebruiker getoont wordt. Om een taal
+                toe
+                te voegen kun je een bestaande vertaling kopieren en binnen de buitenste <code>{}</code> plakken,
+                daarnaa
+                kiun je de text tussen de <code>"</code> aanpassen. De eerste die je kunt aanpassen is de naam van de
+                taal.
+                Verder is het de text die getoont wordt</li>
+            <li>connectorNames: dit is de naam van de connectoren als er geen naam van het beeldscherm getoond woordt of
+                de
+                optie useMonitorName de waarde false heeft.</li>
+        </ul>
+        <p>om deze instellingen aan te passen moet je de code van de macro aanpassen. Dat zijn de lijnen code tussen
+            lijnen
+            2 en 31. Om de module te gebruiken hoeven deze niet aangepast te worden.</p>
+    </div>
+</body>
+
+</html>
