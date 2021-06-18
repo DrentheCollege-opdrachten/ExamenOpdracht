@@ -16,7 +16,7 @@ export interface xapi {
         };
         Call: {
             Status: {
-                get(callback: (callStatus: CallStatusType) => void): void;
+                get(): Promise<CallStatusType>;
                 on(callback: (callStatus: CallStatusType) => void): void;
             }
         }
@@ -48,7 +48,7 @@ export interface xapi {
                 }): void;
                 Reset(Options?: {
                     Output: number
-                }):void;
+                }): void;
                 Unassign(options: {
                     Output: number
                     RemoteMain?: number
@@ -58,7 +58,7 @@ export interface xapi {
         };
         Presentation: {
             Start(Object: { ConnectorId: number; }): void;
-            Stop(setting?: {instance?: number, PresentationSource?: number}): void;
+            Stop(setting?: { instance?: number, PresentationSource?: number }): void;
         };
         UserInterface: {
             Message: {
@@ -84,9 +84,9 @@ export interface xapi {
             on(callback: (event: PresentationPreview) => void): () => void;
         }
         UserInterface: {
-            Message: { 
-                Prompt: { 
-                    Response:{
+            Message: {
+                Prompt: {
+                    Response: {
                         on(callback: (event: { FeedbackId: string, OptionId: string, id: string }) => void): () => void;
                     }
                 }
@@ -177,7 +177,7 @@ export interface CallDisconnectEvent {
     CallType: string;
     CauseCode: string;
     CauseOrigin: string;
-    CauseString:string;
+    CauseString: string;
     CauseType: string;
     CauseValue: string;
     DisplayName: string;
@@ -215,4 +215,4 @@ export type OnOffType = "On" | "Off";
 export type PresentationSelectionType = "AutoShare" | "Desktop" | "Manual" | "OnConnect";
 export type QualityType = "Motion" | "Sharpness";
 export type VisibilityType = "Always" | "IfSignal" | "Never";
-export type OutputConnectorConfigType = {get(): Promise<Array<OutputConnectorConfiguration>>} | [{ MonitorRole(role: MonitorRoleType) }];
+export type OutputConnectorConfigType = { get(): Promise<Array<OutputConnectorConfiguration>> } | [{ MonitorRole(role: MonitorRoleType) }];
